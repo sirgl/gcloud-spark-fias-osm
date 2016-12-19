@@ -1,0 +1,23 @@
+group 'ru.nsu.rivanov'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile name: "OSMonaut-1.1-SNAPSHOT-all"
+    compile group: 'net.sf.opencsv', name: 'opencsv', version: '2.3'
+    compile group: 'org.apache.spark', name: 'spark-core_2.10', version: '2.0.2'
+    compile group: 'org.apache.spark', name: 'spark-sql_2.10', version: '2.0.2'
+
+
+}
